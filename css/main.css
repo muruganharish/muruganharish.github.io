@@ -2591,6 +2591,43 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+/* fa */
+
+	.fa {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
+
+		.fa > .label {
+			display: none;
+		}
+
+		.fa:before {
+			line-height: inherit;
+		}
+
+		.fa.solid:before {
+			font-weight: 900;
+		}
+
+		.fa.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
 /* Image */
 
 	.image {
@@ -2830,8 +2867,26 @@ input, select, textarea {
 				border-radius: 100%;
 				font-size: 1.25rem;
 			}
+			
+			ul.icons li .fa:before {
+				width: 2.25rem;
+				height: 2.25rem;
+				line-height: 2.25rem;
+				display: inline-block;
+				text-align: center;
+				border-radius: 100%;
+				font-size: 1.25rem;
+			}
 
 		ul.icons.alt li .icon:before {
+			-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			font-size: 1rem;
+		}
+		
+		ul.icons.alt li .fa:before {
 			-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -2897,12 +2952,24 @@ input, select, textarea {
 	ul.icons li a.icon:hover:before {
 		color: #18bfef;
 	}
+	
+	ul.icons li a.fa:hover:before {
+		color: #18bfef;
+	}
 
 	ul.icons.alt li .icon:before {
 		box-shadow: inset 0 0 0 2px #eeeeee;
 	}
 
+	ul.icons.alt li .fa:before {
+		box-shadow: inset 0 0 0 2px #eeeeee;
+	}
+
 	ul.icons.alt li a.icon:hover:before {
+		box-shadow: inset 0 0 0 2px #18bfef;
+	}
+	
+	ul.icons.alt li a.fa:hover:before {
 		box-shadow: inset 0 0 0 2px #18bfef;
 	}
 
@@ -3639,11 +3706,23 @@ input, select, textarea {
 			color: #18bfef;
 		}
 
+		#nav ul.icons li a.fa:hover:before {
+			color: #18bfef;
+		}
+
 		#nav ul.icons.alt li .icon:before {
 			box-shadow: inset 0 0 0 2px #ffffff;
 		}
 
+		#nav ul.icons.alt li .fa:before {
+			box-shadow: inset 0 0 0 2px #ffffff;
+		}
+
 		#nav ul.icons.alt li a.icon:hover:before {
+			box-shadow: inset 0 0 0 2px #18bfef;
+		}
+
+		#nav ul.icons.alt li a.fa:hover:before {
 			box-shadow: inset 0 0 0 2px #18bfef;
 		}
 
@@ -4126,11 +4205,23 @@ input, select, textarea {
 			color: #18bfef;
 		}
 
+		#footer ul.icons li a.fa:hover:before {
+			color: #18bfef;
+		}
+
 		#footer ul.icons.alt li .icon:before {
 			box-shadow: inset 0 0 0 2px #e2e2e2;
 		}
 
+		#footer ul.icons.alt li .fa:before {
+			box-shadow: inset 0 0 0 2px #e2e2e2;
+		}
+
 		#footer ul.icons.alt li a.icon:hover:before {
+			box-shadow: inset 0 0 0 2px #18bfef;
+		}
+
+		#footer ul.icons.alt li a.fa:hover:before {
 			box-shadow: inset 0 0 0 2px #18bfef;
 		}
 
@@ -4261,7 +4352,7 @@ input, select, textarea {
 						-webkit-flex-grow: 0;
 						-ms-flex-grow: 0;
 						flex-grow: 0;
-						width: 6rem;
+						width: 10rem;
 					}
 
 					#footer > section.split.contact > section > :last-child {
@@ -4295,10 +4386,14 @@ input, select, textarea {
 						}
 
 		#footer form label,
-		#footer h3,
-		#footer p {
+		#footer h3 {
 			font-size: 1rem;
 			color: #00007F
+		}
+
+		#footer p {
+			font-size: 1rem;
+			color: #ffffff;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -4692,3 +4787,38 @@ input, select, textarea {
 		}
 
 	}
+	
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;  
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0%;
+  margin-left: -20px;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
